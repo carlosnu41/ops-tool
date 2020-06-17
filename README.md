@@ -9,7 +9,7 @@ Based in the module of node named **MONGOOSE** for the querys
 ### Works
 -Views users [**SUPER USER && NORMAL**]
 
--Create users [** SUPER USER && NORMAL**]
+-Create users [**SUPER USER && NORMAL**]
 
 -VIEW MESSAGES
 
