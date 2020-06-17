@@ -5,20 +5,30 @@ const app = require("inquirer");
 const mongoose = require("mongoose");
 const chalk = require("chalk");
 const { green } = require("chalk");
-const URL = "mongodb://localhost:27017/database";
+const URL = "mongodb+srv://root:root@msg-g9mtl.mongodb.net/test?retryWrites=true&w=majority";
 var prompt = app.createPromptModule();
 var newapp = app.createPromptModule();
 var deleter = app.createPromptModule();
 //funciones de las aplicación
-function elim(){
-    deleter()
+
+async function rev(){
+    var msg_list = await chat.find()
+    console.log(msg_list);
+    ver()
+}
+async function deleter(){
+  verusr()
+  deleter({
+    name: "select",
+    message: "Eliga un usuario para eliminar",
+  })
 }
 mongoose.connect(URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 async function verusr() {
-  var usrlist = await usrs({ rank: "Normal" });
+  var usrlist = await usrs.find({ rank: "Normal" });
   console.log(color.green(usrlist));
   ver();
 }
@@ -92,13 +102,7 @@ function ver() {
     }
     if (menu.read == "Ver Mensajes") {
       console.log(color.inverse("   Espera un momento"));
-      readmsg().then(function () {
-        if ((msglist = [])) {
-          console.log(color.red.black.italic("  No hay mensajes en DB"));
-        } else {
-          console.log(color.inverse(msglist));
-        }
-      });
+      rev()
     }
     if (menu.read == "Crear Usuario") {
       console.log(color.magenta.italic("   Preparate para crear un usuario"));
