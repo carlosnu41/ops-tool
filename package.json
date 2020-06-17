@@ -1,0 +1,17 @@
+{
+  "name": "ops-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "inquirer": "^7.2.0",
+    "mongoose": "^5.9.19"
+  }
+}
